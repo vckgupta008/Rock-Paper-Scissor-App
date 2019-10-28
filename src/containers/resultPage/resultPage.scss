@@ -1,0 +1,60 @@
+
+@import "../../assets/stylesheet/constant.scss";
+@import "../../assets/stylesheet/mixins.scss";
+
+%imageStyle {
+  height: 90px;
+  width: 90px;
+  background-color: $whiteColor;
+  border-radius: 5px;
+}
+
+.inactive {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.result-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $themeColor;
+  .result-page-show-selector {
+    margin-top: 80px;
+    img {
+      @extend %imageStyle;
+      transform: rotate(180deg);
+    }
+    .scissor {
+      transform: rotate(90deg);
+    }
+  }
+  .result-text {
+    margin-top: 30px;
+    @include font(30px, $whiteColor, null, 500);
+  }
+  .result-page-button-group {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: space-around;
+    button {
+      width: 150px;
+      @include font(14px, $blackColor, null, 600);
+      background-color: $buttonColor;
+      border-color: $buttonColor;
+      border-radius: 8px;
+      padding: 12px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  .result-page-your-selector {
+    margin-top: 80px;
+    img {
+      @extend %imageStyle;
+    }
+    .scissor {
+      transform: rotate(-90deg);
+    }
+  }
+}

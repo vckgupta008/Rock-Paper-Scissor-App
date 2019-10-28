@@ -1,0 +1,28 @@
+
+ // @font mixin
+ @mixin font($size: null, $color: null, $family: null, $fontWeight: null) {
+    @if $size != null {
+      font-size: calculateRem($size);
+    }
+    font-family: $family;
+    color: $color;
+    font-weight: $fontWeight;
+  }
+  
+  @function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+  }
+  
+  // @mixin breakPoint for different devices
+  @mixin breakPoint($mediaDeviceType) {
+    @if $mediaDeviceType == medium {
+      @media (min-width: $mediumDevicesMinWidth) and (max-width: $mediumDevicesMaxWidth) {
+        @content;
+      }
+    } @else if $mediaDeviceType == small {
+      @media (min-width: $smallDeivicesMinWidth) and (max-width: $smallDeivicesMaxWidth) {
+        @content;
+      }
+    }
+  }

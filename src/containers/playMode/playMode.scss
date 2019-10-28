@@ -1,0 +1,62 @@
+@import "../../assets/stylesheet/constant.scss";
+@import "../../assets/stylesheet/mixins.scss";
+
+.play-mode-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $themeColor;
+  .play-mode-timer {
+    margin-top: 70px;
+    height: 125px;
+    width: 125px;
+    border: 4px solid white;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    .play-mode-time {
+      margin-top: 30px;
+      @include font(30px, $whiteColor, null, 500);
+    }
+    .play-mode-timer-text {
+      @include font(18px, $whiteColor, null, null);
+    }
+  }
+  .play-mode-player {
+    width: 80%;
+    margin-top: 40px;
+    text-align: center;
+    .play-mode-player-name {
+      @include font(20px, $blackColor, null, 500);
+    }
+  }
+  .selected-option-text {
+    margin-top: 30px;
+    @include font(18px, $whiteColor, null, null);
+  }
+  .play-mode-selectors {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    img {
+      height: 90px;
+      width: 90px;
+      background-color: $whiteColor;
+      border-radius: 5px;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 15px lightgray;
+      }
+    }
+    .scissor {
+      transform: rotate(-90deg);
+    }
+    .selected {
+      background-color: $buttonColor;
+      opacity: 0.8;
+      box-shadow: 0px 0px 5px lightgray;
+    }
+  }
+}

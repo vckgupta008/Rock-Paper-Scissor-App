@@ -1,0 +1,19 @@
+@import "../../assets/stylesheet/constant.scss";
+@import "../../assets/stylesheet/mixins.scss";
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  min-height: 98vh;
+  .select-mode-container,
+  .play-mode-container,
+  .result-page-container {
+    width: 33%;
+  }
+}
+
+// /*CSS for Tablet*/
+// @include breakPoint(medium) {
+
+// }

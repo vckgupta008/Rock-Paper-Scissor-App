@@ -1,0 +1,37 @@
+@import "../../assets/stylesheet/constant.scss";
+@import "../../assets/stylesheet/mixins.scss";
+
+%flexStyle {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-mode-container {
+  @extend %flexStyle;
+  background-color: $themeColor;
+  align-items: center;
+  .select-play-text {
+    @include font(24px, $whiteColor, null, null);
+    margin-top: 100px;
+  }
+  .select-play-button-group {
+    @extend %flexStyle;
+    margin-top: 30px;
+    .inactive{
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    button {
+      width: 220px;
+      color: black;
+      font-size: 14px;
+      background-color: $buttonColor;
+      border-color: $buttonColor;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 80px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
