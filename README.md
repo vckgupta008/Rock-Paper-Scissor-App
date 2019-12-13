@@ -1,4 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Rock Paper Scissor is a web application based game developed using React JS. It contains two modes. 1-Player vs Computer, 2-Computer vs Computer. To run the application Kindly follow the below steps:-
 
 Prequisite: Complete the basic setup by installing Node js.
