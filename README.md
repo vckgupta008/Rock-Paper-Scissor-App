@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Prequisite: Complete the basic setup by installing Node js.
 
-# Play around with my app
+### Play around with my app
 https://we5wn.csb.app/
 
 ## Available Scripts
